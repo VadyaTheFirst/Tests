@@ -10,7 +10,7 @@ public class UserTest {
 
     @Before
     public void initTest() {
-        user = new User( "@a.","a");
+        user = new User( "a@.","a@.");
     }
 
     ;
@@ -35,7 +35,7 @@ public class UserTest {
 
     @Test
     public void testEqual() throws Exception{
-        Assert.assertEquals(user.getLogin(),user.getEmail());
+        Assert.assertNotEquals(user.getLogin(),user.getEmail());
     }
 
 
